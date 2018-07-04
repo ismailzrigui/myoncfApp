@@ -1,0 +1,9 @@
+$stable: #EB6E15;
+$balanced: #FF6400;
+$link-color: $balanced;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+body {
+	color: #FFFFFF;
+}
+

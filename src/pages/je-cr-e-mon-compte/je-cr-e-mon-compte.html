@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>je cree mon compte</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding="true" class="has-header">
+    <div>
+      <img src="img/YN5JxpPATta8PPf9pQm3_oncf_logo.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <form class="list" (ngSubmit)="saveForm()">
+      <ion-list>
+			<label>
+              <span class="input-label">Nom</span>
+		    </label>
+              <input type="text" placeholder="" [(ngModel)]="nom" name="nom">
+            <br />
+            <label>
+                <span class="input-label">Prénom</span>
+            </label>    
+				<input type="text" placeholder="" [(ngModel)]="prenom" name="prenom">
+            <br />
+			<label>
+			  <span class="input-label">Email</span>
+			</label>
+			<input type="email" placeholder="" [(ngModel)]="email" name="email">
+			<br />
+			
+			<label>
+			<span class="input-label">Mot de passe</span>
+			</label>
+			<input type="password" placeholder="" [(ngModel)]="mdp" name="mdp">
+			<br />
+      </ion-list>
+      <div class="spacer" style="height: 40px;"></div>
+      <button ion-button full  style="background-color: #FF6700; color:#FFFFFF;font-size:12px;border-radius:100px 100px 100px 100px;" class="button button-balanced button-block" class="button button-light button-block" type="submit">S'enregistrer</button>
+     
+    </form>
+  </ion-content>

@@ -1,0 +1,9 @@
+{
+  "name": "myoncf",
+  "app_id": "",
+  "type": "ionic-angular",
+  "gulpStartupTasks": ["sass", "watch"],
+  "integrations": {
+    "cordova": {}
+  }
+}

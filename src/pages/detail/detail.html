@@ -1,0 +1,81 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Mes données</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding="true" class="has-header">
+      <div>
+       <p style="font-size:20px;"><b> Mes données personnelles </b></p>
+      </div>
+	  
+      <form class="list" (ngSubmit)="saveForm()">
+        <ion-list>
+            <label >
+				<span class="input-label">Nom </span>
+			</label>
+                <input type="text" placeholder="" [(ngModel)]="nom" name="nom">
+			<br /><br />
+            <label >
+                <span class="input-label">Prénom </span>
+			</label>
+                <input type="text" placeholder="" [(ngModel)]="prenom" name="prenom">
+            <br /><br />    
+				
+			<label >
+				<span class="input-label">Date naissance
+				</span>
+			</label>    
+			<input type="date" placeholder="" [(ngModel)]="date_nais" name="date_nais">
+			<br /><br />  
+
+            <label >
+                      <span class="input-label">N° Téléphone
+                      </span>
+			</label>
+            <input type="number" placeholder="" [(ngModel)]="num_tel" name="num_tel">
+            <br /><br />        
+
+			<label>
+				<span class="input-label">Email
+				</span>
+			</label>
+				<input type="email" placeholder="" [(ngModel)]="email" name="email">
+			<br /><br />
+
+			<label>
+				<span class="input-label">Mot de passe</span>
+			</label>
+				<input type="password" placeholder="" [(ngModel)]="mdp" name="mdp">
+			<br /><br />
+
+                    <!--<label >
+                      <span class="input-label">Mode d'accès à la gare&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;
+                      </span>
+                      <input type="text" placeholder="" [(ngModel)]="mode_access" name="mode_access">
+                    </label>-->
+                   
+				   <ion-item>
+                      <ion-label><label >Mode d'accès à la gare</label></ion-label>
+                      <ion-select [(ngModel)]="mode_access" name="mode_access">
+                        <ion-option value="à pieds">à pieds</ion-option>
+                        <ion-option value="voiture">voiture</ion-option>
+                        <ion-option value="taxis">taxis</ion-option>
+                        <ion-option value="bus">bus</ion-option>
+                        <ion-option value="vélo">vélo</ion-option>
+                        <ion-option value="autres">autres</ion-option>
+                      </ion-select>
+                    </ion-item>
+		</ion-list>
+        <div class="spacer" style="height: 40px;"></div>
+        <button ion-button full  style="background-color: #FF6700; color:#FFFFFF;font-size:12px;border-radius:100px 100px 100px 100px;" class="button button-balanced button-block" class="button button-light button-block" type="submit">Mettre à jour mes données</button>
+      </form>
+	    <div>
+        <p style="font-size:20px;"><b> Mes abonnements </b></p>
+		<p> Vous n'avez aucun abonnement en cours ... </p>
+      </div>
+    </ion-content>
